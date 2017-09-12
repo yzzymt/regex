@@ -25,16 +25,20 @@ a = re.findall('\s', text)
 print "using \s:", a
 #匹配空白符，制表符（\t），换行符（\n），回车符（\r）
 
-a = re.match ('.{8}', text)
+a = re.match('.{8}', text)
 print "using .{8}:", a.group()
 
-a = re.search ('A.{5}T', text)
+a = re.search('A.{5}T', text)
 print "using A.{5}T:", a.group()
 #使用search寻找整个字符串的第一个匹配
 
-a = re.search ('\w{7}', text)
+a = re.search('\w{7}', text)
 print "using \w{7}:", a.group()
 
-a = re.search ('\\b\w{5}\\b', text)
+a = re.search('\\b\w{5}\\b', text)
 print "using \w{7}:", a.group()
 #\\b匹配单词边界，没有\\b匹配ANCYE，有\\b匹配SEVEN
+
+a = re.findall('\\b\w{5}\\b', text)
+print "using \\b\w{5}\\b:", a.group()
+#找出所有五字母单词
