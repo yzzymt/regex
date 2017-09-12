@@ -35,3 +35,6 @@ print "using A.{5}T:", a.group()
 a = re.search ('\w{7}', text)
 print "using \w{7}:", a.group()
 
+a = re.search ('\\b\w{5}\\b', text)
+print "using \w{7}:", a.group()
+#\\b匹配单词边界，没有\\b匹配ANCYE，有\\b匹配SEVEN
