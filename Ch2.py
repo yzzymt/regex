@@ -36,9 +36,9 @@ a = re.search('\w{7}', text)
 print "using \w{7}:", a.group()
 
 a = re.search('\\b\w{5}\\b', text)
-print "using \w{7}:", a.group()
+print "using \\b\w{5}\\b:", a.group()
 #\\b匹配单词边界，没有\\b匹配ANCYE，有\\b匹配SEVEN
 
 a = re.findall('\\b\w{5}\\b', text)
-print "using \\b\w{5}\\b:", a.group()
+print "using \\b\w{5}\\b:", a
 #找出所有五字母单词
